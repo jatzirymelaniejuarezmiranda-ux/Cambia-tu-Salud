@@ -1,0 +1,583 @@
+/* ===== ESTILOS GENERALES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1929 100%);
+    min-height: 100vh;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.hero {
+    background: linear-gradient(135deg, #1db584 0%, #0a9d6e 50%, #087c56 100%);
+    color: white;
+    padding: 80px 30px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(29, 181, 132, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-weight: 800;
+    letter-spacing: -1px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 50px 20px 80px;
+}
+
+/* ===== SECCIÓN INTRO CON IMAGEN ===== */
+.intro-section {
+    background: linear-gradient(135deg, rgba(29, 181, 132, 0.15) 0%, rgba(10, 157, 110, 0.1) 100%);
+    border: 2px solid rgba(29, 181, 132, 0.3);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(29, 181, 132, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.intro-section:hover {
+    box-shadow: 0 25px 60px rgba(29, 181, 132, 0.3), inset 0 1px 0 rgba(29, 181, 132, 0.2);
+    transform: translateY(-3px);
+}
+
+.intro-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.intro-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 15px 40px rgba(29, 181, 132, 0.3);
+    border: 3px solid rgba(29, 181, 132, 0.4);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.intro-image:hover {
+    transform: scale(1.05);
+}
+
+.intro-text h3 {
+    color: #1db584;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.intro-subtitle {
+    color: #1db584;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.intro-text p {
+    color: #d0d0d0;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .intro-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .intro-text p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ===== SECCIÓN ACERCA DE ===== */
+.about-section {
+    background: rgba(30, 35, 55, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    margin-bottom: 40px;
+    border: 1px solid rgba(29, 181, 132, 0.2);
+}
+
+.about-section h2 {
+    color: #1db584;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.about-section p {
+    color: #d0d0d0;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.about-section strong {
+    color: #1db584;
+    font-weight: 600;
+}
+
+/* ===== SECCIÓN DE FORMULARIO ===== */
+.form-section {
+    background: rgba(30, 35, 55, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    margin-bottom: 50px;
+    border: 1px solid rgba(29, 181, 132, 0.2);
+    transition: all 0.3s ease;
+}
+
+.form-section:hover {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(29, 181, 132, 0.2);
+    border-color: rgba(29, 181, 132, 0.4);
+}
+
+.form-section h2 {
+    color: #1db584;
+    margin-bottom: 35px;
+    font-size: 2rem;
+    border-bottom: 3px solid #1db584;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+/* ===== FORMULARIO ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1db584;
+}
+
+.form-group input,
+.form-group select {
+    padding: 14px 18px;
+    border: 2px solid rgba(29, 181, 132, 0.3);
+    border-radius: 12px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input::placeholder {
+    color: rgba(224, 224, 224, 0.5);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #1db584;
+    background: rgba(29, 181, 132, 0.1);
+    box-shadow: 0 0 0 4px rgba(29, 181, 132, 0.15);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== BOTONES ===== */
+.btn-calculate {
+    padding: 16px 40px;
+    background: linear-gradient(135deg, #1db584 0%, #0a9d6e 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 30px rgba(29, 181, 132, 0.3);
+}
+
+.btn-calculate:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(29, 181, 132, 0.4);
+}
+
+.btn-calculate:active {
+    transform: translateY(-1px);
+}
+
+.btn-again {
+    padding: 14px 35px;
+    background: transparent;
+    color: #1db584;
+    border: 2px solid #1db584;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-again:hover {
+    background: #1db584;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(29, 181, 132, 0.3);
+}
+
+/* ===== SECCIÓN DE RESULTADOS ===== */
+.result-section {
+    animation: slideIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.result-section.hidden {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-section h2 {
+    color: #1db584;
+    margin-bottom: 35px;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 3px solid #1db584;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+/* ===== TARJETA IMC ===== */
+.result-card {
+    background: rgba(30, 35, 55, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    margin-bottom: 35px;
+    text-align: center;
+    border: 1px solid rgba(29, 181, 132, 0.2);
+    transition: all 0.3s ease;
+}
+
+.result-card:hover {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(29, 181, 132, 0.2);
+}
+
+.imc-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.imc-label {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.imc-value {
+    font-size: 5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #1db584 0%, #0a9d6e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== TARJETA DE ESTADO ===== */
+.status-card {
+    background: rgba(30, 35, 55, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-left: 5px solid #1db584;
+    margin-bottom: 35px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(29, 181, 132, 0.2);
+}
+
+.status-card:hover {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(29, 181, 132, 0.2);
+    transform: translateY(-2px);
+}
+
+.status-card h3 {
+    color: #1db584;
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.status-card p {
+    color: #c0c0c0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* ===== TARJETA DE MOTIVACIÓN ===== */
+.motivation-card {
+    background: linear-gradient(135deg, rgba(29, 181, 132, 0.15) 0%, rgba(10, 157, 110, 0.1) 100%);
+    border: 2px solid rgba(29, 181, 132, 0.3);
+    color: #e0e0e0;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(29, 181, 132, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    margin-bottom: 35px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.motivation-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(29, 181, 132, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.motivation-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #1db584;
+    position: relative;
+    z-index: 1;
+}
+
+.motivation-text {
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: #e0e0e0;
+    position: relative;
+    z-index: 1;
+}
+
+.personal-greeting {
+    font-size: 1.15rem;
+    color: #1db584;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 2px solid rgba(29, 181, 132, 0.3);
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== CONSEJOS DE SALUD ===== */
+.health-tips {
+    background: rgba(30, 35, 55, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    margin-bottom: 35px;
+    border: 1px solid rgba(29, 181, 132, 0.2);
+    transition: all 0.3s ease;
+}
+
+.health-tips:hover {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(29, 181, 132, 0.2);
+}
+
+.health-tips h3 {
+    color: #1db584;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.health-tips ul {
+    list-style: none;
+}
+
+.health-tips li {
+    background: linear-gradient(135deg, rgba(29, 181, 132, 0.1) 0%, rgba(10, 157, 110, 0.05) 100%);
+    padding: 18px 24px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border-left: 4px solid #1db584;
+    color: #e0e0e0;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(29, 181, 132, 0.2);
+}
+
+.health-tips li:hover {
+    background: linear-gradient(135deg, rgba(29, 181, 132, 0.2) 0%, rgba(10, 157, 110, 0.1) 100%);
+    transform: translateX(8px);
+    border-color: rgba(29, 181, 132, 0.4);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: rgba(10, 14, 39, 0.95);
+    color: #a0a0a0;
+    text-align: center;
+    padding: 40px;
+    margin-top: 80px;
+    font-size: 0.95rem;
+    border-top: 2px solid rgba(29, 181, 132, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+footer p {
+    font-weight: 500;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .form-section,
+    .result-card,
+    .status-card,
+    .motivation-card,
+    .health-tips {
+        padding: 35px 25px;
+    }
+
+    .imc-value {
+        font-size: 3.5rem;
+    }
+
+    .form-section h2,
+    .result-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .status-card h3,
+    .health-tips h3,
+    .motivation-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .motivation-text {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 30px 15px 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .imc-value {
+        font-size: 2.5rem;
+    }
+}
